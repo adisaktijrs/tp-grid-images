@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 10px;
+}
+
+h2 span {
+    font-size: 2.2rem;
+}
+
+.container {
+    display: grid;
+    height: 97vh;
+    width: 97vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.2rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.container>div {
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px rgba(149, 157, 165, 0.2);
+}
+
+.container>div:hover {
+    opacity: 0.9;
+    box-shadow: 0px 8px 20px rgba(149, 157, 165, 0.7);
+}
+
+.container>div:nth-of-type(1) {
+    grid-column: span 2;
+}
+
+.container>div:nth-of-type(6) {
+    grid-column: span 2;
+}
+
+.container>div:nth-of-type(9) {
+    grid-column: span 2;
+}
+
+.container>div:nth-of-type(10) {
+    grid-column: span 2;
+}
+
+.bg1 {
+    background: url('./img/bg1.jpg');
+}
+
+.bg2 {
+    background: url('./img/bg2.jpg');
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 0.8rem;
+        overflow: auto;
+    }
+
+    .container>div {
+        border-radius: 7px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin: 10px;
+    }
+
+    h2 span {
+        font-size: 1.3rem;
+    }
+
+    .container>div:nth-of-type(1) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .container>div:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .container>div:nth-of-type(6) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .container>div:nth-of-type(9) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .container>div:nth-of-type(10) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+}
